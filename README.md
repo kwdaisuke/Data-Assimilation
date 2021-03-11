@@ -4,5 +4,6 @@ Data assimilation is a mathematical discipline that seeks to optimally combine t
 
 # Source
 Wikipedia Data Assimilation: https://en.wikipedia.org/wiki/Data_assimilation \
-A Novel Neural Network Training Framework with Data Assimilation: https://arxiv.org/abs/2010.02626
-JulianMack's amazing github: https://github.com/julianmack/Data_Assimilation
+A Novel Neural Network Training Framework with Data Assimilation: https://arxiv.org/abs/2010.02626 \
+JulianMack's amazing github: https://github.com/julianmack/Data_Assimilation \
+Attention-based Convolutional Autoencoders for 3D-Variational Data Assimilation, Julian Mack, Rossella Arcucci, Miguel Molina-Solana, Yi-Ke Guo https://arxiv.org/abs/2101.02121
