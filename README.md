@@ -14,6 +14,7 @@ Data assimilation is a mathematical discipline that seeks to optimally combine t
 - **SEEK filter**: Singular Evolutive Extended Kalman filter(reduced-order scheme for nonlinear models)
 
 # Source
+Data assimilation, Didier AUROUX, Jacques BLUM, Universit ́e de Nice Sophia Antipolis \
 Wikipedia Data Assimilation: https://en.wikipedia.org/wiki/Data_assimilation \
 A Novel Neural Network Training Framework with Data Assimilation: https://arxiv.org/abs/2010.02626 \
 JulianMack's amazing github: https://github.com/julianmack/Data_Assimilation \
