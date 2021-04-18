@@ -1,25 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 # Lorenz model
 import numpy as np
 import matplotlib.pyplot as plt
-
-
-# In[2]:
-
 
 # model parameters (=> "chaotic" system)
 s = 10.0
 r = 28.0
 b = 8.0/3.0
-
-
-# In[20]:
-
 
 # time window, time step, ...
 T = 5.0
@@ -27,14 +16,9 @@ N = 4000
 dt = T/N
 
 
-# In[21]:
-
 
 # observation frequency
 freqobs = 100 # every 100 time steps, we have one observation
-
-
-# In[22]:
 
 
 # solve direct model
@@ -47,8 +31,6 @@ def lorenz(X0): # X0 is a vector dimension 3
         X[i+1,2] = X[i,2] + dt * (X[i,0]*X[i,1]-b*X[i,2]) # z component
     return X
 
-
-# In[23]:
 
 
 # direct simulation
@@ -82,7 +64,6 @@ Rinv = np.linalg.inv(R)
 
 # In[26]:
 
-
 # background solution:
 Xb0 = np.array([-4.0,-6.0,18.0])
 ###Xb0 = X0test
@@ -106,13 +87,9 @@ def cost(X0): # J(X0)
     return J
 
 
-# In[28]:
 
 
 cost(X0test)
-
-
-# In[33]:
 
 
 # resolution of adjoint model
@@ -164,8 +141,9 @@ print(cost(X0test),cost(X0test+epsilon*Y))
 (cost(X0test+epsilon*Y)-cost(X0test))/epsilon
 
 
-# In[ ]:
 
+from scipy.optimize import minimize
+res = minimize(cost, Xb0, method="BFGS", jac=costadj, options={'maxiter': 400}) #Qusi-Newton
 
 
 
